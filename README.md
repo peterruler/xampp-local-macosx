@@ -12,10 +12,10 @@
 # 1) Installer-App aus dem DMG nach /Applications kopieren
 sudo cp -R "/Volumes/XAMPP/xampp-osx-8.2.4-0-installer.app" "/Applications/"
 # 2) Quarantine-Flag auf der kopierten App entfernen
-sudo cp -R "/Volumes/XAMPP/xampp-osx-8.2.4-0-installer.app" "/Applications/"
+sudo xattr -dr com.apple.quarantine "/Applications/xampp-osx-8.2.4-0-installer.app"
 # 3) Installer starten
 open "/Applications/xampp-osx-8.2.4-0-installer.app"
 # 4) Nach der Installation (Manager ebenfalls ggf. ent-quarantänen)
 sudo xattr -dr com.apple.quarantine "/Applications/XAMPP/manager-osx.app"
 open "/Applications/XAMPP/manager-osx.app"
-``
+```
