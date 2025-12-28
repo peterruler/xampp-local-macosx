@@ -1,11 +1,13 @@
 # Instructions to run website locally
 - Edit /etc/hosts
-`sudo vi /etc/hosts # 127.0.0.1 fian-ch.org www.fian-ch.org`
+- `sudo -S "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" --wait "/etc/hosts"`
+- add this line: `127.0.0.1 fian-ch.org www.fian-ch.org`
 - Start XAMPP
 - Edit
-- `sudo nano /Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf`
+- `sudo -S "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" --wait "/Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf"`
 - add contents from the file in this repository
-- line 488 remove comment, set Include etc/extra/httpd-vhosts.conf
+- line 488 remove comment, set 
+- `Include etc/extra/httpd-vhosts.conf`
 - `sudo -S "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" --wait "/Applications/XAMPP/xamppfiles/etc/httpd.conf"`
 - restart server
 - `sudo -S /Applications/XAMPP/xamppfiles/xampp restartapache`
